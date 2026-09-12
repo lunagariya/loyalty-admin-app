@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import '@shopify/polaris/build/esm/styles.css';import './globals.css';import {Providers} from '@/components/Providers';
+export const metadata:Metadata={title:'Loyalty & Rewards',description:'Shopify merchant loyalty dashboard'};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" suppressHydrationWarning><head><meta name="shopify-api-key" content={process.env.NEXT_PUBLIC_SHOPIFY_API_KEY||''}/><script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script></head><body><Providers>{children}</Providers></body></html>}

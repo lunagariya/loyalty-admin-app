@@ -1,0 +1,1 @@
+'use client';import useSWR from 'swr';import {api} from '../api';import {Analytics,Customer} from '../types';export const useAnalytics=()=>useSWR<Analytics>('/api/admin/analytics/overview',api);export const useTopCustomers=()=>useSWR<Customer[]>('/api/admin/analytics/top-customers?limit=10',api);

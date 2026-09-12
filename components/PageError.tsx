@@ -1,0 +1,1 @@
+'use client';import {Banner,Button,BlockStack} from '@shopify/polaris';export function PageError({error,retry}:{error:Error;retry:()=>void}){return <Banner tone="critical" title="Unable to load data"><BlockStack gap="300"><p>{error.message}</p><div><Button onClick={retry}>Try again</Button></div></BlockStack></Banner>}
