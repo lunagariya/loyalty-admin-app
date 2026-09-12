@@ -1,1 +1,0 @@
-'use client';import {Button} from '@shopify/polaris';import {useUi} from './Providers';export function ThemeToggle(){const{dark,toggle}=useUi();return <Button onClick={toggle}>{dark?'Light mode':'Dark mode'}</Button>}
