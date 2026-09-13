@@ -35,9 +35,18 @@ Import this repository as a Netlify site. Use `npm run build` as the build comma
 
 ## Screenshots
 
-Add release screenshots here after connecting a populated development store:
+### Dashboard
 
-- Dashboard — `docs/screenshots/dashboard.png`
-- Customers — `docs/screenshots/customers.png`
-- Rules and rewards — `docs/screenshots/configuration.png`
-- Analytics — `docs/screenshots/analytics.png`
+![Loyalty dashboard](docs/screenshots/dashboard.png)
+
+### Customers
+
+![Customer management](docs/screenshots/customers.png)
+
+### Rules and rewards
+
+![Loyalty rules and rewards configuration](docs/screenshots/configuration.png) (docs/screenshots/rewards.png)
+
+### Analytics
+
+![Loyalty analytics](docs/screenshots/analytics.png)
