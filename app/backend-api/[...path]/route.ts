@@ -12,7 +12,7 @@ async function proxy(request:NextRequest,{params}:{params:Promise<{path:string[]
     const hasBody=!['GET','HEAD'].includes(request.method);
     const response=await fetch(target,{method:request.method,headers,body:hasBody?await request.arrayBuffer():undefined,cache:'no-store',redirect:'manual'});
     const responseHeaders=new Headers();
-    for(const name of ['content-type','content-disposition']){const value=response.headers.get(name);if(value)responseHeaders.set(name,value)}
+    for(const name of ['content-type','content-disposition','x-shopify-retry-invalid-session-request']){const value=response.headers.get(name);if(value)responseHeaders.set(name,value)}
     return new NextResponse(response.body,{status:response.status,headers:responseHeaders});
   }catch(error){
     const message=error instanceof Error?error.message:'Backend unavailable';
